@@ -541,6 +541,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
+    internal func searchAction (_ barButton : IQBarButtonItem?) {
+        
+        
+    }
+    
     /**	doneAction. Resigning current textField. */
     internal func doneAction (_ barButton : IQBarButtonItem?) {
         
@@ -778,6 +783,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         //Loading IQToolbar, IQTitleBarButtonItem, IQBarButtonItem to fix first time keyboard apperance delay (Bug ID: #550)
         let textField = UITextField()
+        textField.addRightButtonOnKeyboardWithText("Numara Ara", target: self, action: #selector(searchAction(_:)), shouldShowPlaceholder: shouldShowPlaceholder)
         textField.addDoneOnKeyboardWithTarget(nil, action: #selector(self.doneAction(_:)))
         textField.addPreviousNextDoneOnKeyboardWithTarget(nil, previousAction: #selector(self.previousAction(_:)), nextAction: #selector(self.nextAction(_:)), doneAction: #selector(self.doneAction(_:)))
         
