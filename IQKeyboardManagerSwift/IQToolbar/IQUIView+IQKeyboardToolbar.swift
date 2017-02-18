@@ -602,7 +602,7 @@ public extension UIView {
             items.append(UIView.flexibleBarButtonItem())
             
             //Done button
-            let doneButton = IQBarButtonItem(title: "Arama Yap", style: .done, target: self, action: action)
+            let doneButton = IQBarButtonItem(title: "Arama Yap", style: .done, target: self, action: doneAction)
             items.append(doneButton)
             
             //  Adding button to toolBar.
@@ -853,7 +853,7 @@ public extension UIView {
             items.append(UIView.flexibleBarButtonItem())
             
             //Done button
-            let doneButton = IQBarButtonItem(title: "Arama Yap", style: .done, target: self, action: action)
+            let doneButton = IQBarButtonItem(title: "Arama Yap", style: .done, target: self, action: doneAction)
             items.append(doneButton)
             
             //  Adding button to toolBar.
